@@ -1,0 +1,9 @@
+# Binaries are NEVER committed to git — they are uploaded as
+# GitHub Release assets (Releases tab). Committing them would
+# bloat the repo history by ~120 MB per version, forever.
+*.exe
+*.dmg
+*.AppImage
+*.deb
+*.msi
+*.rpm
