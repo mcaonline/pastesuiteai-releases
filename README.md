@@ -12,14 +12,14 @@ Every release includes a 7-day unlimited trial — no account, no card. Non-AI f
 
 | Platform | File | Notes |
 |---|---|---|
-| **Windows 10 / 11** (64-bit) — **stable** | `PasteSuiteAI_<version>_x64-setup.exe` | Installer, digitally signed by Keynaptic GmbH |
-| **macOS** (Apple Silicon, M1 or newer) — **early beta** | `PasteSuiteAI_<version>_aarch64.dmg` | ⚠️ **Unsigned** build — see [macOS instructions](#installing-on-macos-early-beta-unsigned-build) |
-| **Linux** (x86-64, portable) — **early beta** | `PasteSuiteAI_<version>_amd64.AppImage` | Runs without installation |
-| **Debian / Ubuntu** (x86-64) — **early beta** | `PasteSuiteAI_<version>_amd64.deb` | Native package |
+| **Windows 10 / 11** (64-bit) | `PasteSuiteAI_<version>_x64-setup.exe` | Installer, digitally signed by Keynaptic GmbH |
+| **macOS** (Apple Silicon & Intel, macOS 11+) | `PasteSuiteAI_<version>_universal.dmg` | Signed by Keynaptic GmbH and notarized by Apple — available from 1.0.5 in a few days |
+| **Linux** (x86-64, portable) | `PasteSuiteAI_<version>_amd64.AppImage` | Runs without installation |
+| **Debian / Ubuntu** (x86-64) | `PasteSuiteAI_<version>_amd64.deb` | Native package |
 
 ---
 
-## Installing on Windows (stable)
+## Installing on Windows
 
 1. Download `PasteSuiteAI_<version>_x64-setup.exe` and open it.
 2. If Windows shows a blue **"Windows protected your PC"** window, click the small **"More info"** link.
@@ -55,31 +55,21 @@ Full illustrated guide: [pastesuiteai.com/install-help](https://pastesuiteai.com
 
 ---
 
-## Installing on macOS (early beta, UNSIGNED build)
+## Installing on macOS
 
-> ⚠️ **The macOS build is an early beta and currently unsigned and not notarized.** We are working on Apple Developer signing. Until then, macOS will refuse to open the app on first launch — the steps below show how to allow it. Only download it from this page or from [pastesuiteai.com](https://pastesuiteai.com/).
+Runs on Apple Silicon (M1 or newer) and Intel Macs with macOS 11 or newer. The app is signed by Keynaptic GmbH and notarized by Apple.
 
-Requires an **Apple Silicon Mac** (M1 or newer).
-
-1. Download `PasteSuiteAI_<version>_aarch64.dmg` and open it.
+1. Download `PasteSuiteAI_<version>_universal.dmg` and open it.
 2. Drag **PasteSuiteAI** into the **Applications** folder.
-3. Open PasteSuiteAI from Applications. macOS shows a warning that the app could not be verified — click **Done** (do **not** click "Move to Trash").
-4. Open **System Settings → Privacy & Security**, scroll down to the security section — you'll see *"PasteSuiteAI" was blocked…* — click **Open Anyway** and confirm.
-5. PasteSuiteAI now starts normally. This is a one-time step.
-
-Alternatively, in Terminal (removes the quarantine flag in one step):
-
-```sh
-xattr -cr /Applications/PasteSuiteAI.app
-```
+3. Open PasteSuiteAI from Applications. macOS asks once whether you want to open an app downloaded from the internet — click **Open**.
 
 On first run, grant the **Accessibility** and **Microphone** permissions when macOS asks — they are required for hotkeys, pasting, and dictation.
 
 ---
 
-## Installing on Linux (early beta)
+## Installing on Linux
 
-The Linux version is an **early beta**. Built and tested against **X11**. On Wayland sessions some global-hotkey features may be limited.
+Works on X11 and Wayland. On Wayland your desktop may ask once to allow the hotkeys and pasting.
 
 ### AppImage (any x86-64 distribution)
 
